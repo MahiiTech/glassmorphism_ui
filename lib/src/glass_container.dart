@@ -14,9 +14,9 @@ import 'package:flutter/material.dart';
 ///   blur: 20,
 ///   opacity: 0.3,
 ///   borderRadius: BorderRadius.circular(15),
-///   borderColor: Colors.white.withOpacity(0.3),
+///   borderColor: Colors.white.withValues(alpha: 0.3),
 ///   borderWidth: 1.5,
-///   shadowColor: Colors.black.withOpacity(0.1),
+///   shadowColor: Colors.black.withValues(alpha: 0.1),
 ///   shadowBlurRadius: 10,
 ///   padding: EdgeInsets.all(20),
 ///   child: Text("Glassmorphism!"),
@@ -88,7 +88,8 @@ class GlassContainer extends StatelessWidget {
           padding: padding,
           decoration: BoxDecoration(
             // Use custom background color or default to white with opacity
-            color: (backgroundColor ?? Colors.white).withOpacity(opacity),
+            color: (backgroundColor ?? Colors.white)
+                .withValues(alpha: opacity),
             borderRadius: borderRadius,
             border: Border.all(color: borderColor, width: borderWidth),
             boxShadow: [

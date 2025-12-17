@@ -1,7 +1,12 @@
 name: glassmorphism_ui
 description: A Flutter package for creating beautiful glassmorphism UI effects.
 version: 0.0.1
-homepage: https://github.com/MaheshSatre16/glassmorphism_ui
+homepage: https://github.com/MahiiTech/glassmorphism_ui
+repository: https://github.com/MahiiTech/glassmorphism_ui
+issue_tracker: https://github.com/MahiiTech/glassmorphism_ui/issues
+
+
+
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

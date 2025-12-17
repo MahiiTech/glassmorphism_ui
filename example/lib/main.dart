@@ -56,7 +56,9 @@ class MyApp extends StatelessWidget {
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        shadows: [Shadow(color: Colors.black45, blurRadius: 5)],
+                        shadows: [
+                          Shadow(color: Colors.black45, blurRadius: 5),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 24),
@@ -64,7 +66,8 @@ class MyApp extends StatelessWidget {
                     // Days of the week header
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                      children:
+                      ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
                           .map(
                             (day) => Text(
                           day,
@@ -96,13 +99,20 @@ class MyApp extends StatelessWidget {
                               if (index < startWeekday - 1) {
                                 return const SizedBox.shrink();
                               }
+
                               final day = index - (startWeekday - 2);
-                              final date = DateTime(today.year, today.month, day);
+                              final date = DateTime(
+                                today.year,
+                                today.month,
+                                day,
+                              );
 
                               final isToday = _isSameDay(date, today);
                               final isSelected =
-                                  selected != null && _isSameDay(date, selected);
-                              final isWeekend = date.weekday == 6 || date.weekday == 7;
+                                  selected != null &&
+                                      _isSameDay(date, selected);
+                              final isWeekend =
+                                  date.weekday == 6 || date.weekday == 7;
 
                               return InkWell(
                                 onTap: () => selectedDate.value = date,
@@ -116,7 +126,7 @@ class MyApp extends StatelessWidget {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: isWeekend
-                                          ? Colors.white.withOpacity(0.1)
+                                          ? Colors.white.withValues(alpha: 0.1)
                                           : Colors.transparent,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
@@ -139,7 +149,7 @@ class MyApp extends StatelessWidget {
                                             color: Colors.black45,
                                             blurRadius: 5,
                                             offset: Offset(1, 1),
-                                          )
+                                          ),
                                         ]
                                             : null,
                                       ),
@@ -164,8 +174,9 @@ class MyApp extends StatelessWidget {
                         }
 
                         final day = selected.day;
-                        final eventText =
-                        dummyEvents.containsKey(day) ? dummyEvents[day]! : "No events";
+                        final eventText = dummyEvents.containsKey(day)
+                            ? dummyEvents[day]!
+                            : "No events";
 
                         return GlassContainer(
                           blur: 20,
@@ -198,8 +209,10 @@ class MyApp extends StatelessWidget {
                       blur: 20,
                       opacity: 0.3,
                       borderRadius: BorderRadius.circular(30),
-                      padding:
-                      const EdgeInsets.symmetric(horizontal: 40, vertical: 14),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 14,
+                      ),
                       child: InkWell(
                         onTap: () {},
                         borderRadius: BorderRadius.circular(30),
@@ -214,7 +227,7 @@ class MyApp extends StatelessWidget {
                                 color: Colors.black38,
                                 blurRadius: 3,
                                 offset: Offset(1, 1),
-                              )
+                              ),
                             ],
                           ),
                           textAlign: TextAlign.center,
