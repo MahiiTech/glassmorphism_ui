@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: [
                     const Text(
-                      'Glassmorphic Calendar',
+                      'Calendar 2026',
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,

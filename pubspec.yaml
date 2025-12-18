@@ -5,9 +5,6 @@ homepage: https://github.com/MahiiTech/glassmorphism_ui
 repository: https://github.com/MahiiTech/glassmorphism_ui
 issue_tracker: https://github.com/MahiiTech/glassmorphism_ui/issues
 
-
-
-
 environment:
   sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.10.0"
