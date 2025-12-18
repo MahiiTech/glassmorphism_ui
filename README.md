@@ -8,6 +8,11 @@ A Flutter package to create glassmorphism effects easily.
 - Custom border radius
 - Gradient support
 
+## Usecase 
+
+![Glassmorphism UI Preview](assets/usecase.png)
+
+
 ## Installation
 ```yaml
 dependencies:

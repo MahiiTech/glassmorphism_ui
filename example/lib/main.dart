@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
+import 'package:glassmorphism_ui_plus/glassmorphism_ui_plus.dart';
 
 void main() {
   runApp(const MyApp());
